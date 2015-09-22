@@ -1,0 +1,18 @@
+main
+	__CC2DW
+interrupt
+	init_magnetometer
+		I2C1_Init
+		I2C1_Start
+			I2C1_Is_Idle
+		I2C1_Wr
+		I2C1_Stop
+	get_magnetometer
+		I2C1_Start
+			I2C1_Is_Idle
+		I2C1_Wr
+		I2C1_Stop
+		I2C1_Rd
+	get_direction
+		Mul_32x32_U
+	notify
